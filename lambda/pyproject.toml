@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "ec2-saver"
+name = "rds-saver"
 version = "0.1.0"
 description = ""
 authors = ["Tomohiko Ozawa <kota65535@gmail.com>"]
