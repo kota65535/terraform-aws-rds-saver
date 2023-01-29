@@ -17,7 +17,11 @@ rds = boto3.client("rds")
 def lambda_handler(event: dict, context: dict):
     logger.info(f"Input: {json.dumps(event)}")
 
-    current_hour = str(datetime.now(tz=timezone(TIMEZONE)).hour)
+    if "current_hour" in event:
+        # for debug purpose
+        current_hour = event["current_hour"]
+    else:
+        current_hour = str(datetime.now(tz=timezone(TIMEZONE)).hour)
 
     logger.info(f"current hour: {current_hour}")
 
