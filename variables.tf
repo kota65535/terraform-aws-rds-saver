@@ -10,7 +10,7 @@ variable "lambda_iam_role_name" {
   default     = "rds-saver"
 }
 
-variable "time_zone" {
+variable "timezone" {
   type    = string
   default = "UTC"
 }
